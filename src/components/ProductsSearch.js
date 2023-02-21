@@ -1,6 +1,6 @@
 import { Form } from "react-bootstrap"
 
-export const ProductsSearch = ({ searchProducts }) => {
+export const ProductsSearch = ({ searchProducts, filterProducts }) => {
 
     return (
         <>
@@ -15,7 +15,7 @@ export const ProductsSearch = ({ searchProducts }) => {
                 } }
             />
             <Form.Group className="mb-3 checkbox" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Only show products on stock" />
+                <Form.Check type="checkbox" label="Only show products on stock" onClick={ () => filterProducts() } />
             </Form.Group>
         </>
     )
