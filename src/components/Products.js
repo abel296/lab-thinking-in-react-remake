@@ -9,10 +9,14 @@ export const Products = () => {
 
     useEffect(() => setTimeout(() => setProductsListState(products.data), 1000) , [])
 
+    const searchProducts = text => {
+        setProductsListState(products.data.filter(elm => elm.name.toLowerCase().includes(text.toLowerCase())))
+    }
+
     return (
         <Container>
             <h1>IronStore</h1>
-            <ProductsSearch />
+            <ProductsSearch searchProducts={ e => searchProducts (e)} />
             <ProductsTable products={productsListState} />
         </Container>
     )

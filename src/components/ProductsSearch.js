@@ -1,6 +1,7 @@
 import { Form } from "react-bootstrap"
 
-export const ProductsSearch = () => {
+export const ProductsSearch = ({ searchProducts }) => {
+
     return (
         <>
             <Form.Label htmlFor="inputPassword5">Search</Form.Label>
@@ -8,6 +9,10 @@ export const ProductsSearch = () => {
                 type="text"
                 id="search"
                 aria-describedby="passwordHelpBlock"
+                onSubmit={ e => e.preventDefault() }
+                onChange={ e => {
+                    searchProducts(e.target.value)
+                } }
             />
             <Form.Group className="mb-3 checkbox" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Only show products on stock" />
