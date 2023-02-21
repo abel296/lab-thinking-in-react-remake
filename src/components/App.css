@@ -7,3 +7,11 @@
 input {
     margin: .2rem;
 }
+
+.rows-headers {
+    background-color: #e8ecef ;
+}
+
+.products-table {
+    text-align: center;
+}
