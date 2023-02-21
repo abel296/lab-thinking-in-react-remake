@@ -1,6 +1,8 @@
 import { Table } from "react-bootstrap"
+import { ProductRow } from "./ProductRow"
 
 export const ProductsTable = ({ products }) => {
+
     return (
         <Table hover className="products-table">
             <thead>
@@ -10,12 +12,7 @@ export const ProductsTable = ({ products }) => {
                 </tr>
             </thead>
             <tbody>
-                { products?.map(elm => {
-                    return  <tr key={elm.id}>
-                                <td>{ elm.name }</td>
-                                <td>{ elm.price }</td>
-                            </tr>
-                }) }
+                { products?.map(elm => <ProductRow { ...elm } key={ elm.id } />)}
             </tbody>
         </Table>
     )
