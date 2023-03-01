@@ -16,19 +16,21 @@ export const Products = () => {
     }, 1000), [productsList])
 
     const searchProducts = text => {
-        const filterdListAfterSearch = productsList.filter(elm => elm.name.toLowerCase().includes(text.toLowerCase()))
+        const filterdListAfterSearch = productsOnStockState
+            ? productsList.filter(elm => elm.name.toLowerCase().includes(text.toLowerCase()) && elm.stocked)
+            : productsList.filter(elm => elm.name.toLowerCase().includes(text.toLowerCase()))
         setProductsListState(filterdListAfterSearch)
-        setProductListBeforeFilterState(filterdListAfterSearch)
     }
 
     const filterProducts = () => {
         if (!productsOnStockState) {
+            setProductListBeforeFilterState(productsListState)
             setProductsListState(productsListState.filter(elm => elm.stocked))
             setProductsOnStockState(true)
         } else {
             setProductsListState(productListBeforeFilterState)
             setProductsOnStockState(false)
-        }
+        }   
     }
 
     return (
