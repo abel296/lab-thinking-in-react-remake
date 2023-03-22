@@ -2,6 +2,10 @@
 
 # LAB | Thinking in React
 
+List of products with search and filter done for practicing React. 
+
+[https://store-search.vercel.app](https://store-search.vercel.app)
+
 <!-- ![image](https://media.giphy.com/media/AnRrZMk7NNf4oF8IzS/giphy.gif) -->
 
 We believe that up to this point we all understand that **in React everything is a component**. A React app is built of components, usually a lot of them, and they are _usually_ nested into one another. To refresh our memory, **a component is a reusable piece of code, which defines how certain features should look and behave on the UI**.
