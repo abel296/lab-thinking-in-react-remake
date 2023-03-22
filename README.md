@@ -1,10 +1,12 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
+# Description
+
+List of products with search and filter made for practicing React.
+
+Try it here: [https://store-search.vercel.app](https://store-search.vercel.app)
+
 # LAB | Thinking in React
-
-List of products with search and filter done for practicing React. 
-
-[https://store-search.vercel.app](https://store-search.vercel.app)
 
 <!-- ![image](https://media.giphy.com/media/AnRrZMk7NNf4oF8IzS/giphy.gif) -->
 
